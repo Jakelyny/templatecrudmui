@@ -19,7 +19,7 @@ const Sobre = () => {
                                     Sobre o sistema...
                                 </Typography>
                                 <Typography variant="h5" component="div">
-                                    Sistema de gerenciamento de Posts
+                                    Sistema de gerenciamento de lembretes
                                 </Typography>
                                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
                                     Exemplo de uso da Biblioteca Material UI

@@ -4,15 +4,20 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import { getlembretesFirebase } from '../servicos/LembretesService';
 
 function Home() {
+
+    useEffect(() => {
+        getlembretesFirebase(setListaObjetos);
+    }, []);
 
     const [listaObjetos, setListaObjetos] = useState([
         {
             id: '1xxx',
-            titulo: 'Usando Firebase',
+            quando: 'Usando Firebase',
             texto: 'Como usar o Firebase',
-            url: 'https://firebase.google.com/docs/guides?hl=pt-br',
+            anotacao: 'https://firebase.google.com/docs/guides?hl=pt-br',
             tipo: 'Documentação',
             usuario: 'Jorge',
             email: 'jlbavaresco@gmail.com',
@@ -20,9 +25,9 @@ function Home() {
         },
         {
             id: '2xxx',
-            titulo: 'Analysis of Component Libraries for React JS',
+            quando: 'Analysis of Component Libraries for React JS',
             texto: 'Analysis of Component Libraries for React JS',
-            url: 'https://iarjset.com/wp-content/uploads/2021/06/IARJSET.2021.8607.pdf',
+            anotacao: 'https://iarjset.com/wp-content/uploads/2021/06/IARJSET.2021.8607.pdf',
             tipo: 'Artigo',
             usuario: 'Jorge',
             email: 'jlbavaresco@gmail.com',
@@ -36,7 +41,7 @@ function Home() {
     return (
         <div style={{ padding: '20px' }}>
             <Typography variant="h5" component="div">
-                Firebase com Firestore - Posts - PWA
+                Firebase com Firestore - lembretes - PWA
             </Typography>
             {listaObjetos.length === 0 && <Typography variant="h5" component="div">
                 Nenhum registro encontrado
@@ -55,13 +60,13 @@ function Home() {
                                         {objeto.tipo}
                                     </Typography>
                                     <Typography variant="h5" component="div">
-                                        {objeto.titulo}
+                                        {objeto.quando}
                                     </Typography>
                                     <Typography sx={{ mb: 1.5 }} color="text.secondary">
                                         {objeto.texto}
                                     </Typography>
                                     <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                        <Link href={objeto.url}
+                                        <Link href={objeto.anotacao}
                                             target="_blank" rel="noreferrer">Link</Link>
                                     </Typography>
                                     <Typography variant="h7" component="div">

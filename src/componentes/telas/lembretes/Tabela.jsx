@@ -1,5 +1,5 @@
 import { useContext, useMemo } from "react";
-import PostsContext from "./PostsContext";
+import lembretesContext from "./LembretesContext";
 import Alerta from "../../comuns/Alerta";
 import { MaterialReactTable } from 'material-react-table';
 import { MenuItem } from '@mui/material';
@@ -13,7 +13,7 @@ import Button from '@mui/material/Button';
 function Tabela() {
 
     const { alerta, listaObjetos, remover, editarObjeto, novoObjeto }
-        = useContext(PostsContext);
+        = useContext(lembretesContext);
 
     const columns = useMemo(
         () => [
@@ -22,8 +22,8 @@ function Tabela() {
                 header: 'ID',
             },
             {
-                accessorKey: 'titulo',
-                header: 'Título'
+                accessorKey: 'quando',
+                header: 'Quando'
             },
             {
                 accessorKey: 'tipo',
@@ -34,8 +34,8 @@ function Tabela() {
                 header: 'Texto'
             },            
             {
-                accessorKey: 'url',
-                header: 'Url'
+                accessorKey: 'anotacao',
+                header: 'Anotação'
             }, 
             {
                 accessorKey: 'usuario',
@@ -56,7 +56,7 @@ function Tabela() {
     return (
         <div style={{ padding: '20px' }}>
             <Typography variant="h4">
-                Posts
+                Lembretes
             </Typography>
             <Alerta alerta={alerta} />
             <Button variant="outlined"
@@ -65,7 +65,7 @@ function Tabela() {
             </Button>
             {listaObjetos.length === 0 &&
                 <Typography variant="h4">
-                    Nenhum Post encontrado
+                    Nenhum lembrete encontrado
                 </Typography>}
             {listaObjetos.length > 0 && (
                 <MaterialReactTable

@@ -1,6 +1,6 @@
 {
-  "short_name": "Meus Posts",
-  "name": "Meu App de Posts",
+  "short_name": "Meus lembretes",
+  "name": "Meu App de lembretes",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_anotacao": ".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

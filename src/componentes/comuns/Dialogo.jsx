@@ -11,7 +11,7 @@ function Dialogo(props) {
             maxWidth={props.maxWidth}
             // maxWidth pode ser 'xs' 'sm' 'md' 'lg' 'xl'
             id={props.id}>
-            <DialogTitle>{props.titulo}</DialogTitle>
+            <DialogTitle>{props.quando}</DialogTitle>
             <form id={props.idform} onSubmit={props.acaoCadastrar}>
                 <DialogContent>
                     <Box

@@ -9,7 +9,7 @@ import Sobre from './componentes/Sobre';
 import NotFound from './componentes/NotFound';
 import Home from './componentes/telas/home/Home';
 import Login from './componentes/telas/login/Login';
-import Posts from './componentes/telas/posts/Posts';
+import Lembretes from './componentes/telas/lembretes/Lembretes';
 
 
 const router = createBrowserRouter([
@@ -30,8 +30,8 @@ const router = createBrowserRouter([
         element: <Login />,
       },     
       {
-        path: "posts",
-        element: <Posts />,
+        path: "lembretes",
+        element: <Lembretes />,
       },       
       {
         path: "*",
