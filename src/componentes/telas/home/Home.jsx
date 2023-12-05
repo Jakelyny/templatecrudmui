@@ -60,10 +60,10 @@ function Home() {
                                         {objeto.tipo}
                                     </Typography>
                                     <Typography variant="h5" component="div">
-                                        {objeto.quando}
+                                        {objeto.texto}
                                     </Typography>
                                     <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                        {objeto.texto}
+                                        {objeto.quando}
                                     </Typography>
                                     <Typography sx={{ mb: 1.5 }} color="text.secondary">
                                         {objeto.anotacao}
