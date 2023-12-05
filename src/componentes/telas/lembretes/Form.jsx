@@ -23,12 +23,21 @@ function Form() {
                     tipo="text" name="id" value={objeto.id}
                     onchange={handleChange} requerido={false}
                     readonly={true} />
-                <CampoEntrada id="txtquando" label="Quando"
+                <CampoSelect
+                    id="selectQuando" label="Quando"
+                    idLabel="labelTipo"
                     tipo="text" name="quando" value={objeto.quando}
                     onchange={handleChange} requerido={true}
-                    readonly={false} maxlength={50}
-                    msgvalido="quando OK"
-                    msginvalido="Informe quando" />
+                    msgvalido="Tipo OK"
+                    msginvalido="Informe quando">                    
+                    <MenuItem value='Segunda'>Segunda</MenuItem>
+                    <MenuItem value='Terça'>Terça</MenuItem>                    
+                    <MenuItem value='Quarta'>Quarta</MenuItem>                    
+                    <MenuItem value='Quinta'>Quinta</MenuItem>                    
+                    <MenuItem value='Sexta'>Sexta</MenuItem>                    
+                    <MenuItem value='Sábado'>Sábado</MenuItem>                    
+                    <MenuItem value='Domingo'>Domingo</MenuItem>                    
+                </CampoSelect>
                 <CampoEntradaTexto id="txtTexto" label="Texto"
                     rows={5}
                     tipo="text" name="texto"
