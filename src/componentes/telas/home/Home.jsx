@@ -66,8 +66,7 @@ function Home() {
                                         {objeto.texto}
                                     </Typography>
                                     <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                        <Link href={objeto.anotacao}
-                                            target="_blank" rel="noreferrer">Link</Link>
+                                        {objeto.anotacao}
                                     </Typography>
                                     <Typography variant="h7" component="div">
                                         {objeto.usuario}
