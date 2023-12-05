@@ -19,11 +19,11 @@ const firebaseApp = initializeApp(firebaseConfig);
 const auth = getAuth(firebaseApp);
 const db = getFirestore(firebaseApp);
 //export default firebaseApp;
-const googleProvider = new GithubAuthProvider();
+const GithubProvider = new GithubAuthProvider();
 
 const signInWithGoogle = async () => {
     try {
-        const res = await signInWithPopup(auth, googleProvider);
+        const res = await signInWithPopup(auth, GithubProvider);
         const user = res.user;
         const q = query(collection(db, "users"), where("uid", "==", user.uid));
         const docs = await getDocs(q);
